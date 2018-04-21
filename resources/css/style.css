@@ -1,0 +1,248 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	/*background-image: linear-gradient(#36D1DC, #5B86E5);*/
+	background-color: #f8f8f8;
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	width: 100%;
+	font-family: 'Arsenal', sans-serif;
+	font-size: 4vh;
+	color: #454553;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	border: none;
+	outline: none;
+	overflow: hidden;
+}
+
+div {
+	overflow: hidden;
+}
+
+/*--------------------------------------*/
+/*----------       MAIN      -----------*/
+/*--------------------------------------*/
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.display-none {
+	display: none;
+}
+
+.wrapper {
+	width: 95%;
+	height: 95vh;
+	/* whatever width you want */
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.main {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	/* fill parent */
+	background-color: deepskyblue;
+	/* let's see it! */
+	color: white;
+	border-radius: 15px;
+}
+
+.hidden {
+	display: none;
+}
+
+.game-title {
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	transform: translate(-50%, -40%);
+	text-transform: uppercase;
+	font-size: 150%;
+	width: 100%;
+	text-align: center;
+}
+
+.log {
+	position: absolute;
+	left: 50%;
+	top: 30%;
+	transform: translate(-50%, -30%);
+	font-size: 120%;
+	width: 100%;
+	text-align: center;
+}
+
+/*--------------------------------------*/
+/*----------   NAVIGATION    -----------*/
+/*--------------------------------------*/
+.navigation-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: visible;
+}
+
+.navigation-wrapper.centered {
+	height: 85vh;
+}
+
+.navigation-wrapper.centered .navigation #hint {
+	display: none;
+}
+
+
+.navigation-wrapper.centered .navigation #new-game {
+	position: absolute;
+	left: 50%;
+	top: 65%;
+	transform: translate(-50%, -65%);
+}
+
+.navigation {
+	width: 100%;
+	padding: 1vh;
+	overflow: visible;
+}
+
+.game-mode {
+	background-color: #f8f8f8;
+	height: 30vh;
+	width: 50%;
+	border-radius: 10px;
+	box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+}
+
+.btn {
+	background-color: #f3f7fa;
+	border-radius: 9px;
+	font-size: 70%;
+	color: #009dd1;
+	text-transform: uppercase;
+	padding: 1vh;
+	transition: all 0.3s;
+}
+
+.btn:hover,
+.btn:active {
+	box-shadow: 5px 10px 10px 0 rgba(0,0,0,0.24), 5px 10px 10px 0 rgba(0,0,0,0.19);
+}
+
+.btn-right {
+	float: right;
+	margin-right: 1vh;
+}
+
+.btn-left {
+	float: left;
+	margin-left: 1vh;
+}
+
+/*--------------------------------------*/
+/*----------   HIDDEN WORD   -----------*/
+/*--------------------------------------*/
+.hidden-word-wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	text-align: center;
+}
+
+.hidden-word {
+	display: inline-block;
+	font-size: 200%;
+}
+
+
+/*--------------------------------------*/
+/*----------     LETTERS     -----------*/
+/*--------------------------------------*/
+.letters-wrapper {
+	position: absolute;
+	width: 95%;
+	margin-left: 2.5%;
+	bottom: 0;
+	left: 0;
+	height: 22.5vh;
+}
+
+/*.ru {
+	height: 22.5vh;
+}
+
+.en {
+	height: 22.5vh;
+}*/
+
+.letters {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: auto;
+}
+
+.letter-unit-placeholder {
+	position: relative;
+	float: left;
+	display: inline-block;
+	width: 8%;
+	height: 6vh;
+	margin-bottom: 0.6vh;
+}
+
+.letter-unit {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 90%;
+	margin-left: 5%;
+	background-color: #f3f7fa;
+	border-radius: 9px;
+	font-size: 100%;
+	color: #009dd1;
+	transition: all 0.3s;
+}
+
+.letter-unit:hover {
+	cursor: pointer;
+	background-color: rgba(17, 88, 141, 0.2);
+	color: #ffffff;
+}
+
+.letter-unit:disabled {
+	background-color: rgba(243, 247, 250, 0.7);
+	color: #5d7791;
+}
